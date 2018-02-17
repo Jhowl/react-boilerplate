@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta charset="utf-8">
+	<title><%= htmlWebpackPlugin.options.title %></title>
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="robots" content="noindex,follow" />
+	<link rel="shortcut icon" type="image/png" href="<%= htmlWebpackPlugin.files.favicon %>" />
+	<link rel="apple-touch-icon" href="<%= htmlWebpackPlugin.files.favicon %>" />
+
+	<!-- serverMeta -->
+  <link rel="stylesheet" href="<%= Object.keys(compilation.assets).find((f) => f.match(/main.*\.css$/)) %>" async>
+</head>
+
+<body>
+	<div data-js="app"></div>
+
+  <% htmlWebpackPlugin.files.js.forEach((jsFile) => { %>
+    <script src="<%= jsFile %>" <%= jsFile.includes('main') ? 'async' : '' %>></script>
+  <% }) %>
+</body>
+</html>
