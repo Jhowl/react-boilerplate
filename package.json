@@ -5,6 +5,7 @@
   "main": "dist/server/index.js",
   "author": "Paulo Ferreira",
   "scripts": {
+    "start": "yarn prod-start",
     "serve": "yarn dev",
     "dev": "yarn nodemon",
     "nodemon": "cross-env NODE_ENV=development nodemon src/server/index.js --watch src/server/",

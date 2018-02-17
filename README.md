@@ -1,23 +1,22 @@
-# iMasters UI
-Componentes de UI utilizados no projeto iMasters.
+# React Boilerplate
+A simple react boilerplate
 
-Este projeto utiliza as seguintes tecnologias:
+This boilerplate uses:
 
-- SASS como pre-processador css
-- Eslint para padrões de código
-- Storybook para visualização dos componentes
+- SASS to css pre-processor
+- Eslint code standard
+- storybook to preview
+- Express
 
-## Desenvolvimento
+## Development
 
-- Rode `yarn dev`, `yarn serve` ou `yarn start` para desenvolver utilizando o storybook na porta `http://localhost:9002`
-- Rode `yarn build` para gerar o build de produção (os arquivos serão gerados no diretório `dist`)
+- Run `yarn dev`, `yarn serve` to develop on `http://localhost:3000`
+- Run `yarn build` for production build (files will be generated on `dist` directory)
 
 ## Scripts
 
-- `yarn dev (or npm run dev)`: Inicia o desenvolvimento no storybook
-- `yarn build (or npm run build)`: Gera o build de produção
-- `yarn build:analyzer (or npm run build:analyzer)`: Gera o build de produção e abre o bundle analyzer na porta `8888`
-- `yarn storybook (or npm run storybook)`: Roda o Storybook na porta `9002`
-- `yarn build-storybook`: Gera o build estático do Storybook
-- `yarn start (or npm start)`: Script especial reservado para rodar o código de procução. Altere como quiser. Por agora, ele é o mesmo que `yarn dev`.
+- `yarn dev (or npm run dev)`: Starts the development
+- `yarn build (or npm run build)`: Build project to production
+- `yarn build:analyzer (or npm run build:analyzer)`: Build project to production and open bundle analyzer on `8888` port
+- `yarn start (or npm start)`: Start server on `http://localhost:5600` using `forever`
 
