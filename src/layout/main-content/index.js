@@ -1,10 +1,11 @@
-'use strict'
-
 import React from 'react'
+
+// This component come from components folder.
+import { Example } from 'components'
 
 const MainContent = () => (
   <div>
-    Main Content
+    <Example />
   </div>
 )
 

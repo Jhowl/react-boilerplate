@@ -1,25 +1,13 @@
-'use strict'
-
-const { join } = require('path')
-const common = require('./common')
-const prismPath = join(__dirname, '..', 'node_modules', 'prismjs')
+const commons = require('./commons')
 
 module.exports = {
   module: {
     rules: [
-      common.standardPreLoader,
-      common.jsLoader,
-      common.urlLoader,
-      common.fileLoader,
-      Object.assign({}, common.sassLoader, {
-        test: /\.(css|scss)$/,
-        include: common.sassLoader.include.concat([
-          join(common.paths.root, 'storybook', 'ui'),
-          prismPath
-        ])
-      })
+      commons.standardPreLoader,
+      commons.jsLoader,
+      commons.styleLoader
     ]
   },
 
-  resolve: common.resolve
+  resolve: commons.resolve
 }
